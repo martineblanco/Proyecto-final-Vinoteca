@@ -8,11 +8,8 @@ const vino6 = new Vino(6, "familia schroede", 1800, "4.jpg")
 let productos = [vino1, vino2, vino3, vino4, vino5, vino6];
 
 
-if (localStorage.getItem("compra")) {
-    productos = JSON.parse(localStorage.getItem("compra"))
-} else {
-    localStorage.setItem("compra", JSON.stringify(productos))
-}
+
+localStorage.getItem("compra")? productos = JSON.parse(localStorage.getItem("compra")):localStorage.setItem("compra", JSON.stringify(productos))
 
 
 let tabla = document.getElementById("items");
@@ -57,22 +54,19 @@ btnCarrito.addEventListener("click", () => {
     let total = 0;
     tabla.innerHTML = "";
     for (const product of productos) {
-        if (product.cantidad > 0) {
-            tabla.innerHTML += `<th><img src="./imagenes/${product.imagen}" class="card-img-top img-fluid" alt="trumpeter"></th>
-                        <th>${product.nombre}</th>
-                        <th>${product.cantidad}</th>     
-                      <th>$${product.precio}</th>
-                      <th><button id="btn${product.id}" class="btn btn-danger">Eliminar</button></th>
+        let {id,nombre,precio,cantidad,imagen} = product
+        if (cantidad > 0) {
+            tabla.innerHTML += `<th><img src="./imagenes/${imagen}" class="card-img-top img-fluid" alt="trumpeter"></th>
+                        <th>${nombre}</th>
+                        <th>${cantidad}</th>     
+                      <th>$${precio}</th>
+                      <th><button id="btn${id}" class="btn btn-danger">Eliminar</button></th>
                       <hr>`;
             total += precioTotal(product)
         }
     }
     //Si hay productos muestra el El precio total
-    if (total > 0) {
-        mostrarTotal.innerHTML = `$${total}`;
-    } else {
-        mostrarTotal.innerHTML = `El carrito esta vacio`;
-    }
+   mostrar(total)
     eliminarProducto(productos)
 })
 
@@ -96,11 +90,7 @@ function eliminarProducto(productos) {
                         total += precioTotal(product)
                     }
                 }
-                if (total > 0) {
-                    mostrarTotal.innerHTML = `Total: $${total}`;
-                } else {
-                    mostrarTotal.innerHTML = `El carrito esta vacio`;
-                }
+               mostrar(total)
                 eliminarProducto(productos)
                 localStorage.setItem("compra", JSON.stringify(productos))
             })
@@ -109,3 +99,6 @@ function eliminarProducto(productos) {
 }
 
 
+function mostrar(total){
+    total > 0? mostrarTotal.innerHTML = `$${total}`: mostrarTotal.innerHTML = `El carrito esta vacio`
+}
