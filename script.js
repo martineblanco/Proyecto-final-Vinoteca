@@ -16,6 +16,7 @@ let tabla = document.getElementById("items");
 let mostrarTotal = document.getElementById("total");
 const vaciar = document.getElementById("vaciar");
 const btnCarrito = document.getElementById("btnCarrito");
+const comprar = document.getElementById("comprar");
 
 
 let boton1 = document.getElementById("boton1");
@@ -40,13 +41,50 @@ vaciar.onclick = () => {
     tabla.innerHTML = "";
     mostrarTotal.innerHTML = `El carrito esta vacio`;
     localStorage.setItem("compra", JSON.stringify(productos))
+    Swal.fire({
+        title: 'Estás seguro de vaciar el carrito?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, seguro',
+        cancelButtonText: 'No, no quiero'
+    })
 };
 
+// Al hacer click al boton comprar, se realiza la compra
+comprar.onclick= ()=>{
+    Swal.fire({
+        title: 'Estás seguro de realizar la compra?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, seguro',
+        cancelButtonText: 'No, no quiero'
+    }).then((result) => {  
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: 'Compra realizada!',
+                icon: 'success',
+                text: 'La compra ha sido realizada con exito!'
+            })
+            for (producto of productos) {
+                producto.cantidad = 0;
+            }
+            tabla.innerHTML = "";
+            mostrarTotal.innerHTML = `El carrito esta vacio`;
+        }
+    })
+}
 
-// Al hacer click al boton comprar Muestra los productos en una tabla dentro del carrito
+
+// Al hacer click al boton Agregar carrito Muestra los productos en una tabla dentro del carrito
 function clickBoton(productos, i) {
     productos[i].cantidad++;
     localStorage.setItem("compra", JSON.stringify(productos))
+    Toastify({
+        text: "Producto Cargado!",
+        duration: 1500,
+        gravity: "bottom",
+        position: "right"
+    }).showToast();
 }
 
 // Muestra los productos en una tabla dentro del carrito
@@ -79,6 +117,12 @@ function eliminarProducto(productos) {
                 productoSeleccionado.cantidad--;
                 let total = 0;
                 tabla.innerHTML = "";
+                Toastify({
+                    text: "Producto Eliminado!",
+                    duration: 1500,
+                    gravity: "top",
+                    position: "right",
+                }).showToast();
                 for (const product of productos) {
                     if (product.cantidad > 0) {
                         tabla.innerHTML += `<th><img src="./imagenes/${product.imagen}" class="card-img-top img-fluid" alt="trumpeter"></th>

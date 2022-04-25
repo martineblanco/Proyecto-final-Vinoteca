@@ -1,0 +1,23 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbarColor{
+    background-color: #ecd9ea;
+}
+
+.logo{
+    margin-left: 10px;
+    width: 200px;   
+}
+
+.nav-item{
+    padding: 10px;
+    color: white;
+}
+
+.nav-link{
+    font-size: 17px;
+}
