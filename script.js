@@ -35,19 +35,27 @@ botones.forEach((btn, i) => {
 
 // Al hacer click al boton vaciar carrito, vacia la lista de productos en una tabla
 vaciar.onclick = () => {
-    for (producto of productos) {
-        producto.cantidad = 0;
-    }
-    tabla.innerHTML = "";
-    mostrarTotal.innerHTML = `El carrito esta vacio`;
-    localStorage.setItem("compra", JSON.stringify(productos))
     Swal.fire({
         title: 'Estás seguro de vaciar el carrito?',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Sí, seguro',
         cancelButtonText: 'No, no quiero'
+    }).then((result) => {  
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: 'Carrito vacio!',
+                icon: 'success',
+            })
+            for (producto of productos) {
+                producto.cantidad = 0;
+            }
+            tabla.innerHTML = "";
+            mostrarTotal.innerHTML = `El carrito esta vacio`;
+            localStorage.setItem("compra", JSON.stringify(productos))
+        }
     })
+    
 };
 
 // Al hacer click al boton comprar, se realiza la compra
@@ -70,6 +78,7 @@ comprar.onclick= ()=>{
             }
             tabla.innerHTML = "";
             mostrarTotal.innerHTML = `El carrito esta vacio`;
+            localStorage.setItem("compra", JSON.stringify(productos))
         }
     })
 }
@@ -83,6 +92,9 @@ function clickBoton(productos, i) {
         text: "Producto Cargado!",
         duration: 1500,
         gravity: "bottom",
+        style: {
+            background: "#5bb888",
+          },
         position: "right"
     }).showToast();
 }
@@ -121,6 +133,9 @@ function eliminarProducto(productos) {
                     text: "Producto Eliminado!",
                     duration: 1500,
                     gravity: "top",
+                    style: {
+                        background: "#f66",
+                      },
                     position: "right",
                 }).showToast();
                 for (const product of productos) {
