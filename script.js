@@ -3,7 +3,7 @@ const vino2 = new Vino(2, "Luigi Bosca", 1000, "luigi bosca.jpeg")
 const vino3 = new Vino(3, "Cobos", 1500, "cobos.jpg")
 const vino4 = new Vino(4, "Rutini", 2000, "rutini.jpeg")
 const vino5 = new Vino(5, "Emilia Red", 1300, "emilia red.jpeg")
-const vino6 = new Vino(6, "familia schroede", 1800, "4.jpg")
+const vino6 = new Vino(6, "familia schroede", 1800, "familia Schroede.png")
 
 let productos = [vino1, vino2, vino3, vino4, vino5, vino6];
 
@@ -106,7 +106,7 @@ btnCarrito.addEventListener("click", () => {
     for (const product of productos) {
         let {id,nombre,precio,cantidad,imagen} = product
         if (cantidad > 0) {
-            tabla.innerHTML += `<th><img src="./imagenes/${imagen}" class="card-img-top img-fluid" alt="trumpeter"></th>
+            tabla.innerHTML += `<th><img src="../imagenes/${imagen}" class="card-img-top img-fluid" alt="${nombre}"></th>
                         <th>${nombre}</th>
                         <th>${cantidad}</th>     
                       <th>$${precio}</th>
