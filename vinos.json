@@ -1,0 +1,43 @@
+[
+{   "id":1,
+    "nombre": "Trumpeter",
+    "precio": 2500,
+    "imagen": "trumpeter.jpeg"
+},
+
+{
+    "id":2,
+    "nombre": "Luigi Bosca",
+    "precio": 1000,
+    "imagen": "luigi bosca.jpeg" 
+},
+
+{
+    "id":3,
+    "nombre": "Cobos",
+    "precio": 1500,
+    "imagen": "cobos.jpg" 
+},
+
+{
+    "id":4,
+    "nombre": "Rutini",
+    "precio": 2000,
+    "imagen": "rutini.jpeg" 
+},
+
+{
+    "id":5,
+    "nombre": "Emilia Red",
+    "precio": 1300,
+    "imagen": "emilia red.jpeg" 
+},
+
+{
+    "id":6,
+    "nombre": "Familia Schroede",
+    "precio": 1800,
+    "imagen": "familia Schroede.png" 
+}
+
+]

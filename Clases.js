@@ -1,6 +1,6 @@
-class Vino {
-    constructor(id, nombre, precio, imagen) {
-        this.id = id;
+class Carrito{
+    constructor(id, nombre, precio, imagen){
+        this.id=id;
         this.nombre = nombre;
         this.precio = precio;
         this.cantidad = 0;
