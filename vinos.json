@@ -1,43 +1,85 @@
 [
-{   "id":1,
+{   "id":0,
     "nombre": "Trumpeter",
     "precio": 2500,
     "imagen": "trumpeter.jpeg"
 },
 
 {
-    "id":2,
+    "id":1,
     "nombre": "Luigi Bosca",
     "precio": 1000,
     "imagen": "luigi bosca.jpeg" 
 },
 
 {
-    "id":3,
+    "id":2,
     "nombre": "Cobos",
     "precio": 1500,
     "imagen": "cobos.jpg" 
 },
 
 {
-    "id":4,
+    "id":3,
     "nombre": "Rutini",
     "precio": 2000,
     "imagen": "rutini.jpeg" 
 },
 
 {
-    "id":5,
+    "id":4,
     "nombre": "Emilia Red",
     "precio": 1300,
     "imagen": "emilia red.jpeg" 
 },
 
 {
-    "id":6,
+    "id":5,
     "nombre": "Familia Schroede",
     "precio": 1800,
     "imagen": "familia Schroede.png" 
+},
+
+{
+    "id":6,
+    "nombre": "Volturno",
+    "precio": 3000,
+    "imagen": "volturno.png" 
+},
+
+{
+    "id":7,
+    "nombre": "Achaval Ferrer",
+    "precio": 2300,
+    "imagen": "achaval-ferrer.jpeg" 
+},
+
+{
+    "id":8,
+    "nombre": "Catena Zapata",
+    "precio": 2400,
+    "imagen": "catena.jpg" 
+},
+
+{
+    "id":9,
+    "nombre": "Iscay",
+    "precio": 2500,
+    "imagen": "iscay.jpeg" 
+},
+
+{
+    "id":10,
+    "nombre": "Bramare",
+    "precio": 1700,
+    "imagen": "bramare.png" 
+},
+
+{
+    "id":11,
+    "nombre": "Enzo Bianchi",
+    "precio": 2200,
+    "imagen": "enzo.png" 
 }
 
 ]

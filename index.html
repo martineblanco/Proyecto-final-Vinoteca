@@ -5,30 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bootstrap -->
     <link href="https://bootswatch.com/5/minty/bootstrap.min.css" rel="stylesheet">
-
-     <!-- Librerias: Sweet alert -->
-     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-     <!-- Librerias: Toastify -->
-     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-
-     <link rel="stylesheet" href="./style.css">
-     
-    <title>Proyecto Vinoteca</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./imagenes/logo1.png">
+    <title>Nu-Vinos</title>
 </head>
 
 <body>
+
+    <!-------------------------------- Seccion Navbar --------------------------------------------------->
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-            <div class="container-fluid navbarColor">
+            <div class="container-fluid navbarColor nab">
                 <a class="navbar-brand" href="#">
-                    <img src="./imagenes/logo4.png" alt="logo" class="logo">
+                    <img src="./imagenes/logo-nuvinos.png" alt="logo" class="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,190 +40,176 @@
                             <a class="nav-link" href="#productos">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <!-- Button trigger modal -->
-                        <a type="button" id="btnCarrito" class="carro" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        <i class="bi bi-cart2"></i>
-                    </a>
+                            <a type="button" id="btnCarrito" class="carro" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                <i class="bi bi-cart2 icono-carro">
+                                    <div id="total-carrito" class="icono-carro__cantidad"></div>
+                                </i>
+                            </a>
                         </li>
-                        
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    
-
-    <!-- Seccion Nosotros -->
 
     <main>
-        <!-- <div>
-            <img src="./imagenes/inicio4.png" class="img-fluid" alt="...">
-        </div> -->
+        <!----------------------------------- Seccion Nosotros ---------------------------------->
         <div class="card mb-3 cardSeccion" id="nosotros">
+            <h1 class="card-title text-center fw-bolder mt-4 tituloTexto fs-2">A qué nos dedicamos...</h1>
             <div class="row g-0 body">
                 <div class="col-md-4">
-                    <img src="./imagenes/nosotros.jpg" alt="Imagen de servicios de diseños"
-                        class="img-fluid rounded-start ps-1 pe-1 mt-5 rounded-3" data-aos="fade-right">
+                    <img src="./imagenes/nosotros.jpg" alt="Imagen de Nosotros"
+                        class="img-fluid rounded-start ps-1 pe-1 rounded-3 imgNosotros" data-aos="fade-right">
                 </div>
                 <div class="col-md-8 mt-2">
+
                     <div class="card-body">
-                        <h1 class="card-title text-center fw-bolder mt-4 tituloTexto fs-2">¿Quienes Somos?</h1>
-                        <p class="card-text text-center fs-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia deserunt debitis consectetur aut ad quae dicta alias voluptatibus! Culpa eum ut corrupti similique mollitia et molestiae qui labore in autem officiis eos impedit, eveniet recusandae minima aliquid maiores facere aut fugiat dolore officia alias perferendis libero praesentium. Excepturi placeat harum autem perspiciatis expedita natus fuga provident facere rem hic. Excepturi cumque itaque voluptatibus! Dolore quidem optio aut illo possimus repellendus asperiores minima, facere maxime, nisi, suscipit assumenda. Amet ullam, libero numquam maxime deserunt, suscipit mollitia delectus sit nisi et impedit perferendis dignissimos obcaecati. Quas blanditiis minus incidunt tempore iste eaque. Voluptatibus qui blanditiis quidem praesentium ullam assumenda voluptates saepe repudiandae odio molestias ipsum quae, at possimus delectus facilis doloribus accusamus?</p>
+                        <p class="card-text fs-5"> Desde nuestros comienzos tuvimos la idea de tener una sucursal Online
+                            y en el 2022 lo pudimos materializar. Somos bebedores y apasionados por el vino, lo que nos
+                            llevó a estudiar la carrera de sommelier de nuestra amada bebida nacional. Nuestro objetivo
+                            es facilitar a todos los "wine lovers" el acceso a vinos de primera calidad , de las mejores
+                            bodegas de Argentina. Para ello, nuestros sommeliers realizan una selección minuciosa de
+                            cada etiqueta, asegurándonos llegar con un producto de altisima calidad y prestigio en el
+                            mercado nacional e internacional. </p>
+
+                        <p class="card-text fs-5"> Trabajamos directo de bodega para que el vino llegue a tu copa al
+                            mejor precio y en condiciones prístinas. Seleccionamos y degustamos nuestras etiquetas antes
+                            de entablar una relación comercial con las bodegas, ya que únicamente de ésta manera podemos
+                            garantizar la calidad de los productos que ofrecemos.
+
+                            Los invitamos a descubrir y explorar el maravilloso mundo del vino. </p>
+
                     </div>
                 </div>
             </div>
         </div>
-    
-         <!-- Seccion Productos -->
-         <div class="seccion-productos row d-flex">
+
+        <!------------------------------ Seccion Productos -------------------------------------->
+        <div class="seccion-productos row d-flex">
             <h1 class="mb-5 fs-2 text-center fw-bolder mt-4 tituloTexto fs-2">Nuestros productos</h1>
-                <div class="row justify-content-end productos col-md-10" id="productos">
+            <div class="row justify-content-center productos col-md-12" id="productos">
 
-                </div>
             </div>
+        </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container">
-                                <table class="table">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                            <th>Producto</th>
-                                            <th>Nombre</th>
-                                            <th>Cantidad</th>
-                                            <th>Precio Unitario</th>
-                                            <th>Operacion</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="items" class="table-striped">
-                                    </tbody>
-                                    <tfoot class="thead-dark">
-                                        <tr>
-                                            <th>Total: </th>
-                                            <th></th><th></th>
-                                            <th id="total"></th>
-                                            <th></th>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                                <div class="container m-1">
-                                    <button id="vaciar" class="btn btn-primary">
-                                        Vaciar Carrito
-                                    </button>
-                                    <button id="comprar" class="btn btn-primary me-4">
-                                        Comprar
-                                    </button>
-                                </div>
+        <!------------------------------------ Modal Carrito------------------------------------------>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Nombre</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio Unitario</th>
+                                        <th>Operacion</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="items" class="table-striped">
+                                </tbody>
+                                <tfoot class="thead-dark">
+                                    <tr>
+                                        <th>Total: </th>
+                                        <th></th>
+                                        <th></th>
+                                        <th id="total"></th>
+                                        <th></th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <div class="container m-1">
+                                <button id="vaciar" class="btn btn-primary">
+                                    Vaciar Carrito
+                                </button>
+                                <button id="comprar" class="btn btn-primary me-4">
+                                    Comprar
+                                </button>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
+        </div>
     </main>
 
-    <!-- Seccion footer -->
+    <!-------------------------------- Seccion footer ----------------------------------------------------->
     <footer class="text-center text-lg-start" style="background-color: #ecd9ea">
-     <div class="container p-4 pb-0">
-        <section>
-          <div class="row">
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto">
-                <a class="navbar-brand" href="#">
-                    <img src="./imagenes/logo.png" alt="logo" class="logo">
-                </a>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid explicabo eligendi, quam a vero fugiat! Rem et blanditiis libero hic.
-              </p>
-            </div>
-            
-            <!-- Grid column -->
-            <hr class="w-100 clearfix d-md-none" />
-  
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-5">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
-              <p><i class="bi bi-house-door mr-3"></i> Avenida Siempre vivas 707</p>
-              <p><i class="bi bi-envelope"></i> info@gmail.com</p>
-              <p><i class="bi bi-telephone"></i> + 01 234 567 88</p>
-            </div>
-            <!-- Grid column -->
-          </div>
-          <!--Grid row-->
-        </section>
-        <!-- Section: Links -->
-  
-        <hr class="my-3">
-  
-        <!-- Section: Copyright -->
-        <section class="p-3 pt-0">
-          <div class="row d-flex align-items-center">
-            <!-- Grid column -->
-            <div class="col-md-7 col-lg-8 text-center text-md-start">
-              <!-- Copyright -->
-              <div class="p-3">
-                © 2022 Copyright
-                <a class="text-white" href="https://mdbootstrap.com/"
-                   ></a
-                  >
-              </div>
-              <!-- Copyright -->
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-              <!-- Facebook -->
-              <a
-                 class="btn btn-outline-secondary btn-floating m-1"
-                 class="text-white"
-                 role="button"
-                 ><i class="bi bi-facebook"></i
-                ></a>
-  
-              <!-- Twitter -->
-              <a
-                 class="btn btn-outline-secondary btn-floating m-1"
-                 class="text-white"
-                 role="button"
-                 ><i class="bi bi-twitter"></i
-                ></a>
-  
-              <!-- Google -->
-              <a
-                 class="btn btn-outline-secondary btn-floating m-1"
-                 class="text-white"
-                 role="button"
-                 ><i class="bi bi-google"></i
-                ></a>
-  
-              <!-- Instagram -->
-              <a
-                 class="btn btn-outline-secondary btn-floating m-1"
-                 class="text-white"
-                 role="button"
-                 ><i class="bi bi-instagram"></i
-                ></a>
-            </div>
-            <!-- Grid column -->
-          </div>
-        </section>
-        <!-- Section: Copyright -->
-      </div>
-      <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <section>
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto">
+                        <a class="navbar-brand" href="#">
+                            <img src="./imagenes/logo-nuvinos.png" alt="logo" class="logoFooter">
+                        </a>
+                        <p class="pFooter">
+                            Aspiramos a formar parte de ese grupo de empresas pioneras en Argentina que demuestran dia a dia que es posible desarrollar negocios que funcionen de manera online. Para mas informacion seguinos en nuestras redes sociales!
+                        </p>
+                    </div>
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-5">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
+                        <p><i class="bi bi-house-door mr-3"></i> Avenida Siempre vivas 707</p>
+                        <p><i class="bi bi-envelope"></i> info@gmail.com</p>
+                        <p><i class="bi bi-telephone"></i> + 01 234 567 88</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="my-3">
+
+            <!---------------------- Section: Copyright ----------------------------------------->
+            <section class="p-3 pt-0">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+                        <div class="p-3">
+                            © 2022 Copyright
+                            <a class="text-white" href="https://mdbootstrap.com/"></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                        <!-- Facebook -->
+                        <a class="btn btn-outline-secondary btn-floating m-1" class="text-white" role="button"
+                            href="https://www.facebook.com/">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a class="btn btn-outline-secondary btn-floating m-1" class="text-white" role="button"
+                            href="https://www.instagram.com/?hl=es">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <!-- Twitter -->
+                        <a class="btn btn-outline-secondary btn-floating m-1" class="text-white" role="button"
+                            href="https://twitter.com/?lang=es">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+
+                        <!-- Whatsapp -->
+                        <a class="btn btn-outline-secondary btn-floating m-1" class="text-white" role="button"
+                            href="https://www.whatsapp.com/?lang=es">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+        </div>
     </footer>
-    <!-- Footer -->
-  
- 
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

@@ -17,7 +17,6 @@
 
 
 .logo{
-    margin-left: 10px;
     width: 230px;   
 }
 
@@ -36,7 +35,71 @@
     
 }
 
+.nab{
+    align-items: center;
+    margin-top: -50px;
+}
 .carro{
     color: #fdfdfd;
     font-size: 35px;
+}
+
+.icono-carro {
+    position: relative;
+}
+
+.icono-carro__cantidad {
+    position: absolute;
+    bottom: 27px;
+    right: -15px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    line-height: 25px;
+    padding: 0px 7px 0px 4px;
+    font-size: 20px;
+    font-weight: bold;
+       
+}
+
+.imgNosotros{
+    margin-top: 30px;
+}
+
+.seccion-productos{
+    background-color: #f7f0f7;
+}
+
+.colorCant{
+    background-color: white;
+    
+}
+
+.card{
+    border: 0px;
+}
+.cantidadProductos{
+    display: inline;
+}
+
+.cantidadProductos input{
+    width: 50px;
+    height: 35px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-bottom: 0px;
+}
+
+.cardProductos{
+   margin: 30px;
+
+}
+
+.logoFooter{
+    width: 230px; 
+    margin-top: -50px;
+}
+
+.pFooter{
+    margin-top: -40px;
 }
